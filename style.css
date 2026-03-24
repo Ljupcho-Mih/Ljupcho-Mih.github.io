@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f8f9fb;
+  background: #f7f9fb;
   color: #222;
   overflow-x: hidden;
 }
@@ -15,38 +15,52 @@ body {
 
 /* ========== ANIMATIONS ========== */
 .fade-in {
-  animation: fadeIn 1.6s ease-out forwards;
   opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
 }
 
 .slide-up {
+  opacity: 0;
   animation: slideUp 1.2s ease-out forwards;
-  opacity: 0;
-}
-
-.slide-in-right {
-  animation: slideRight 1.4s ease-out forwards;
-  opacity: 0;
 }
 
 .slide-in-left {
-  animation: slideLeft 1.4s ease-out forwards;
   opacity: 0;
+  animation: slideLeft 1.2s ease-out forwards;
 }
 
-@keyframes fadeIn { to { opacity: 1; } }
-@keyframes slideUp { from { transform: translateY(40px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
-@keyframes slideRight { from { transform: translateX(60px); opacity: 0;} to { transform: translateX(0); opacity: 1;} }
-@keyframes slideLeft { from { transform: translateX(-60px); opacity: 0;} to { transform: translateX(0); opacity: 1;} }
+.slide-in-right {
+  opacity: 0;
+  animation: slideRight 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
 
 /* ========== HEADER ========== */
 header {
   background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .nav {
@@ -60,27 +74,27 @@ header {
   height: 55px;
 }
 
-/* Desktop Menu */
+/* Desktop nav */
 .nav-links {
-  display: flex;
-  gap: 20px;
   list-style: none;
+  display: flex;
+  gap: 22px;
 }
 
-.nav a {
+.nav-links li a {
   text-decoration: none;
-  font-weight: 600;
   color: #0A233F;
+  font-weight: 600;
 }
 
-.nav a:hover {
+.nav-links li a:hover {
   color: #3A7F6B;
 }
 
-/* Mobile Menu */
+/* Mobile menu icon */
 .mobile-menu-icon {
-  font-size: 26px;
   display: none;
+  font-size: 28px;
   cursor: pointer;
 }
 
@@ -100,18 +114,20 @@ header {
 
 .hero-content {
   position: relative;
-  top: 38%;
+  top: 35%;
   text-align: center;
   color: white;
 }
 
 .btn {
+  display: inline-block;
+  padding: 12px 26px;
+  margin-top: 18px;
   background: #0A233F;
   color: white;
-  padding: 12px 24px;
+  text-decoration: none;
   border-radius: 6px;
-  display: inline-block;
-  margin-top: 14px;
+  font-weight: 600;
 }
 
 .btn:hover {
@@ -120,7 +136,7 @@ header {
 
 /* ========== FLAGS ========== */
 .flags-bar {
-  background: white;
+  background: #ffffff;
   padding: 12px 0;
   text-align: center;
 }
@@ -135,93 +151,3 @@ header {
   text-align: center;
 }
 
-.alt {
-  background: #eef4f2;
-}
-
-.section-img {
-  width: 100%;
-  margin-top: 30px;
-  border-radius: 10px;
-  animation: fadeIn 1.5s ease-out;
-}
-
-/* ========== ACCORDION ========== */
-.accordion {
-  max-width: 800px;
-  margin: auto;
-  text-align: left;
-}
-
-.accordion-item {
-  background: white;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  border: 1px solid #ddd;
-}
-
-.accordion-header {
-  background: #0A233F;
-  color: white;
-  padding: 16px;
-  cursor: pointer;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-weight: 600;
-}
-
-.accordion-body {
-  padding: 15px;
-  display: none;
-  background: white;
-  animation: fadeIn 0.5s ease-out;
-}
-
-/* ========== CONTACT ========== */
-.contact-form {
-  max-width: 480px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 13px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* ========== FOOTER ========== */
-footer {
-  background: #111;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-/* ========== RESPONSIVE RULES ========== */
-@media(max-width: 860px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 10px;
-    top: 70px;
-    background: white;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .mobile-menu-icon {
-    display: block;
-  }
-}

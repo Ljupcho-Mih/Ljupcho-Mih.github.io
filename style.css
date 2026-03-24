@@ -1,117 +1,163 @@
-/* GENERAL STYLING */
 body {
     margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
     color: #222;
-    scroll-behavior: smooth;
 }
 
-h1, h2 {
-    font-weight: 600;
-}
-
-.section {
-    padding: 80px 40px;
+.container {
+    width: 90%;
     max-width: 1100px;
     margin: auto;
-    text-align: center;
 }
 
-.section img {
-    width: 100%;
-    margin-top: 25px;
-    border-radius: 10px;
-}
-
-.alt {
-    background: #eef7ff;
-}
-
-/* HEADER */
 header {
-    background: #111;
-    padding: 15px 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     position: fixed;
+    top: 0; left: 0;
     width: 100%;
-    top: 0;
     z-index: 1000;
 }
 
-nav {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
 }
 
-nav .logo {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.nav-links {
+.nav ul {
+    list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links a {
-    color: white;
+.nav a {
     text-decoration: none;
+    color: #333;
+    font-weight: 500;
 }
 
-.nav-links a:hover {
-    color: #00c4ff;
+.nav a:hover {
+    color: #005bbb;
 }
 
-/* HERO SECTION */
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+/* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(to bottom right, #0066cc, #00aaff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 95vh;
+    background-image: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
     text-align: center;
-    padding: 0 20px;
+    top: 35%;
     color: white;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+.hero .sub {
+    margin: 10px 0 20px 0;
+    opacity: 0.9;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
+    background: #005bbb;
+    color: white;
     padding: 12px 25px;
-    background: #fff;
-    color: #0077b6;
-    border-radius: 6px;
-    font-weight: bold;
+    border-radius: 5px;
     text-decoration: none;
 }
 
 .btn:hover {
-    background: #e2e2e2;
+    background: #004199;
 }
 
-/* CONTACT */
-.contact-section {
-    padding: 80px 40px;
+/* FLAGS */
+.flags-bar {
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.flags-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 0;
     text-align: center;
 }
 
-.contact-form {
-    max-width: 600px;
+.alt {
+    background: #eef2f7;
+}
+
+.section-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+/* ACCORDION */
+.accordion {
+    max-width: 800px;
     margin: auto;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: #005bbb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accordion-body {
+    display: none;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+/* CONTACT */
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 500px;
+    margin: auto;
 }
 
 .contact-form input,
@@ -119,15 +165,13 @@ nav .logo {
     padding: 12px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 1rem;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
     background: #111;
-    color: #ccc;
-    margin-top: 30px;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
-
+``

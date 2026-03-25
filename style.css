@@ -1,4 +1,3 @@
-/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -12,7 +11,7 @@ body {
   margin: auto;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
   background: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -29,29 +28,22 @@ header {
   padding: 15px 0;
 }
 
-/* UPDATED LOGO SIZE */
 .logo-img {
   height: 140px;
   width: auto;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.mobile-menu-icon {
+  font-size: 30px;
+  align-self: center;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #0A233F;
-  font-weight: 600;
-}
-
-/* ===== HERO ===== */
+/* HERO */
 .hero {
   margin-top: 80px;
   height: 90vh;
-  background: url("https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba") center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba")
+    center/cover no-repeat;
   position: relative;
 }
 
@@ -68,6 +60,11 @@ header {
   color: white;
 }
 
+.hero-content h1 {
+  font-size: 60px;
+  text-shadow: 2px 2px 8px black;
+}
+
 .btn {
   background: #0A233F;
   color: white;
@@ -76,7 +73,7 @@ header {
   text-decoration: none;
 }
 
-/* ===== FLAGS ===== */
+/* FLAGS */
 .flags-bar {
   padding: 10px;
   text-align: center;
@@ -85,9 +82,10 @@ header {
 
 .flags-bar img {
   margin: 5px;
+  cursor: pointer;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 .section {
   padding: 80px 0;
   text-align: center;
@@ -100,11 +98,10 @@ header {
 .section-img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 10px;
 }
 
-/* ===== ACCORDION ===== */
+/* ACCORDION */
 .accordion {
   max-width: 800px;
   margin: auto;
@@ -133,7 +130,7 @@ header {
   display: none;
 }
 
-/* ===== CONTACT ===== */
+/* CONTACT */
 .contact-form {
   max-width: 450px;
   margin: auto;
@@ -155,4 +152,3 @@ footer {
   padding: 20px;
   text-align: center;
 }
-``

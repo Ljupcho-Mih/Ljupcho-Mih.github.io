@@ -6,8 +6,6 @@ document.querySelectorAll("nav a").forEach(link => {
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
-
-    // Close mobile menu after selection
     document.querySelector(".nav-links").classList.remove("open");
   });
 });
@@ -24,14 +22,13 @@ document.querySelectorAll(".accordion-header").forEach(header => {
     const body = header.nextElementSibling;
     const openBody = document.querySelector(".accordion-body.show");
 
-    // Close previously opened item
     if (openBody && openBody !== body) {
       openBody.classList.remove("show");
       openBody.style.display = "none";
     }
 
-    // Toggle current item
     body.classList.toggle("show");
     body.style.display = body.classList.contains("show") ? "block" : "none";
   });
 });
+``

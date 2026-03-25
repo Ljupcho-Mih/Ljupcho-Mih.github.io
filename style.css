@@ -1,4 +1,4 @@
-/* ========== GLOBAL ========== */
+/* GLOBAL */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -13,47 +13,34 @@ body {
   margin: auto;
 }
 
-/* ========== ANIMATIONS ========== */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out forwards;
+/* IMAGES FIX */
+.section-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-top: 25px;
 }
 
-.slide-up {
-  opacity: 0;
-  animation: slideUp 1.2s ease-out forwards;
+/* LOGO FIX */
+.logo-img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
 }
 
-.slide-in-left {
-  opacity: 0;
-  animation: slideLeft 1.2s ease-out forwards;
-}
+/* ANIMATIONS */
+.fade-in { opacity: 0; animation: fadeIn 1.2s ease-out forwards; }
+.slide-up { opacity: 0; animation: slideUp 1.2s ease-out forwards; }
+.slide-in-left { opacity: 0; animation: slideLeft 1.2s ease-out forwards; }
+.slide-in-right { opacity: 0; animation: slideRight 1.2s ease-out forwards; }
 
-.slide-in-right {
-  opacity: 0;
-  animation: slideRight 1.2s ease-out forwards;
-}
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideLeft { from { transform: translateX(-50px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideRight { from { transform: translateX(50px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideLeft {
-  from { transform: translateX(-50px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideRight {
-  from { transform: translateX(50px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-/* ========== HEADER ========== */
+/* HEADER */
 header {
   background: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -70,35 +57,30 @@ header {
   padding: 18px 0;
 }
 
-.logo-img {
-  height: 55px;
-}
-
-/* Desktop nav */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 22px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: #0A233F;
   font-weight: 600;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
   color: #3A7F6B;
 }
 
-/* Mobile menu icon */
+/* MOBILE MENU */
 .mobile-menu-icon {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
 
-/* ========== HERO ========== */
+/* HERO */
 .hero {
   margin-top: 80px;
   height: 92vh;
@@ -134,9 +116,9 @@ header {
   background: #3A7F6B;
 }
 
-/* ========== FLAGS ========== */
+/* FLAGS */
 .flags-bar {
-  background: #ffffff;
+  background: white;
   padding: 12px 0;
   text-align: center;
 }
@@ -145,9 +127,94 @@ header {
   margin: 0 7px;
 }
 
-/* ========== SECTIONS ========== */
+/* SECTIONS */
 .section {
   padding: 85px 0;
   text-align: center;
 }
 
+.alt {
+  background: #eef4f2;
+}
+
+/* ACCORDION FIX */
+.accordion {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.accordion-item {
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  font-size: 1.1rem;
+  background: #0A233F;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.accordion-body {
+  display: none;
+  padding: 15px;
+}
+
+.accordion-body ul {
+  margin-left: 20px;
+}
+
+/* CONTACT */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 870px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 72px;
+    background: white;
+    padding: 18px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}

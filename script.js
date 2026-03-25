@@ -1,33 +1,20 @@
-/* Smooth scroll */
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", function (e) {
+// Smooth Scroll
+document.querySelectorAll("nav a").forEach(a => {
+  a.addEventListener("click", e => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
+    const target = document.querySelector(a.getAttribute("href"));
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
-    document.querySelector(".nav-links").classList.remove("open");
   });
 });
 
-/* Mobile Menu Toggle */
-document.querySelector(".mobile-menu-icon")
-  .addEventListener("click", () => {
-    document.querySelector(".nav-links").classList.toggle("open");
-  });
-
-/* Accordion Logic */
+// Accordion
 document.querySelectorAll(".accordion-header").forEach(header => {
   header.addEventListener("click", () => {
     const body = header.nextElementSibling;
-    const open = document.querySelector(".accordion-body.show");
-
-    if (open && open !== body) {
-      open.classList.remove("show");
-      open.style.display = "none";
-    }
-
-    body.classList.toggle("show");
-    body.style.display = body.classList.contains("show") ? "block" : "none";
+    const isOpen = body.style.display === "block";
+    document.querySelectorAll(".accordion-body").forEach(b => b.style.display = "none");
+    body.style.display = isOpen ? "none" : "block";
   });
 });

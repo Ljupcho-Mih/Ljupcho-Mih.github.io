@@ -1,9 +1,10 @@
-/* ===== GLOBAL ===== */
+/* ========== GLOBAL ========== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  font-family: 'Inter', sans-serif;
+  background: #f7f9fb;
   color: #222;
+  overflow-x: hidden;
 }
 
 .container {
@@ -12,44 +13,99 @@ body {
   margin: auto;
 }
 
-/* ===== HEADER ===== */
+/* ========== ANIMATIONS ========== */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  animation: slideUp 1.2s ease-out forwards;
+}
+
+.slide-in-left {
+  opacity: 0;
+  animation: slideLeft 1.2s ease-out forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  animation: slideRight 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ========== HEADER ========== */
 header {
   background: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  justify-content: space-between;
+  padding: 18px 0;
 }
 
+/* UPDATED: Larger, visible logo */
 .logo-img {
-  height: 55px;
+  height: 140px;
   width: auto;
+  object-fit: contain;
+  margin: 10px 0;
 }
 
+/* Desktop nav */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
   color: #0A233F;
   font-weight: 600;
 }
 
-/* ===== HERO ===== */
+.nav-links li a:hover {
+  color: #3A7F6B;
+}
+
+/* Mobile menu icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ========== HERO ========== */
 .hero {
   margin-top: 80px;
-  height: 90vh;
+  height: 92vh;
   background: url("https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba") center/cover no-repeat;
   position: relative;
 }
@@ -57,7 +113,7 @@ header {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.45);
 }
 
 .hero-content {
@@ -68,27 +124,34 @@ header {
 }
 
 .btn {
+  display: inline-block;
+  padding: 12px 26px;
+  margin-top: 18px;
   background: #0A233F;
   color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
   text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
-/* ===== FLAGS ===== */
+.btn:hover {
+  background: #3A7F6B;
+}
+
+/* ========== FLAGS ========== */
 .flags-bar {
-  padding: 10px;
+  background: #ffffff;
+  padding: 12px 0;
   text-align: center;
-  background: white;
 }
 
-.flags-bar img {
-  margin: 5px;
+.flags-container img {
+  margin: 0 7px;
 }
 
-/* ===== SECTIONS ===== */
+/* ========== SECTIONS ========== */
 .section {
-  padding: 80px 0;
+  padding: 85px 0;
   text-align: center;
 }
 
@@ -96,35 +159,37 @@ header {
   background: #eef4f2;
 }
 
+/* FIXED: No zooming/cropping */
 .section-img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
+  margin-top: 25px;
 }
 
-/* ===== ACCORDION ===== */
+/* ========== ACCORDION ========== */
 .accordion {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
   text-align: left;
 }
 
 .accordion-item {
   border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
   background: white;
 }
 
 .accordion-header {
-  padding: 15px;
+  width: 100%;
   background: #0A233F;
   color: white;
-  cursor: pointer;
   border: none;
-  width: 100%;
-  text-align: left;
+  padding: 16px;
+  cursor: pointer;
+  font-size: 1.1rem;
 }
 
 .accordion-body {
@@ -132,25 +197,55 @@ header {
   display: none;
 }
 
-/* ===== CONTACT ===== */
+.accordion-body ul {
+  margin-left: 20px;
+}
+
+/* ========== CONTACT ========== */
 .contact-form {
-  max-width: 450px;
+  max-width: 500px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   border: 1px solid #ccc;
 }
 
+/* ========== FOOTER ========== */
 footer {
   background: #111;
   color: white;
   padding: 20px;
   text-align: center;
 }
+
+/* ========== RESPONSIVE RULES ========== */
+@media (max-width: 870px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 72px;
+    background: white;
+    padding: 18px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+``

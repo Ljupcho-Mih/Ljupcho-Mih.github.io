@@ -1,20 +1,16 @@
-// Smooth Scroll
-document.querySelectorAll("nav a").forEach(a => {
-  a.addEventListener("click", e => {
-    e.preventDefault();
-    const target = document.querySelector(a.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  });
+document.querySelectorAll('.accordion-header').forEach(h=>{
+ h.addEventListener('click',()=>{
+  const b=h.nextElementSibling;
+  const open=b.style.display==='block';
+  document.querySelectorAll('.accordion-body').forEach(x=>x.style.display='none');
+  b.style.display=open?'none':'block';
+ });
 });
 
-// Accordion Functionality
-document.querySelectorAll(".accordion-header").forEach(header => {
-  header.addEventListener("click", () => {
-    const body = header.nextElementSibling;
-    const isOpen = body.style.display === "block";
-    document.querySelectorAll(".accordion-body").forEach(b => b.style.display = "none");
-    body.style.display = isOpen ? "none" : "block";
-  });
+document.querySelectorAll('.flag').forEach(flag=>{
+ flag.addEventListener('click',()=>{
+  const t=flag.getAttribute('data-target');
+  document.querySelector('#'+t+' .accordion-header').click();
+  document.querySelector('#opportunities').scrollIntoView({behavior:'smooth'});
+ });
 });

@@ -3,11 +3,13 @@ document.querySelectorAll("nav a").forEach(a => {
   a.addEventListener("click", e => {
     e.preventDefault();
     const target = document.querySelector(a.getAttribute("href"));
-    if (target) target.scrollIntoView({ behavior: "smooth" });
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
 
-// Accordion
+// Accordion Functionality
 document.querySelectorAll(".accordion-header").forEach(header => {
   header.addEventListener("click", () => {
     const body = header.nextElementSibling;

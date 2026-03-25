@@ -11,10 +11,12 @@
 
 <header>
   <nav class="container nav">
-    logo.png
+
+    <!-- FIXED LOGO -->
+    <img src="logo.png" alt="CEExpand logo" class="logo-img">
 
     <ul class="nav-links">
-      <li>#heroHome</a></li>
+      <li><a href="#hero">Home</a></li>
       <li><a href="#trade">Trade Missions</a></li>
       <li><a href="#partners">Partner Meetings</a></li>
       <li><a href="#visits">Country Visits</a></li>
@@ -39,16 +41,16 @@
 
 <section class="flags-bar">
   <div class="flags-container">
-    <img src="https://flagcdn.com/40x30/pl.png" alt="Poland">
-    <img src="https://flagcdn.com/40x30/hu.png" alt="Hungary">
-    <img src="https://flagcdn.com/40x30/si.png" alt="Slovenia">
-    <img src="https://flagcdn.com/40x30/hr.png" alt="Croatia">
-    <img src="https://flagcdn.com/40x30/ba.png" alt="Bosnia">
-    <img src="https://flagcdn.com/40x30/rs.png" alt="Serbia">
-    <img src="https://flagcdn.com/40x30/xk.png" alt="Kosovo">
-    <img src="https://flagcdn.com/40x30/al.png" alt="Albania">
-    <img src="https://flagcdn.com/40x30/mk.png" alt="N.Macedonia">
-    <img src="https://flagcdn.com/40x30/bg.png" alt="Bulgaria">
+    <img class="flag" data-target="poland" src="https://flagcdn.com/40x30/pl.png" alt="Poland">
+    <img class="flag" data-target="hungary" src="https://flagcdn.com/40x30/hu.png" alt="Hungary">
+    <img class="flag" data-target="slovenia" src="https://flagcdn.com/40x30/si.png" alt="Slovenia">
+    <img class="flag" data-target="croatia" src="https://flagcdn.com/40x30/hr.png" alt="Croatia">
+    <img class="flag" data-target="bosnia" src="https://flagcdn.com/40x30/ba.png" alt="Bosnia">
+    <img class="flag" data-target="serbia" src="https://flagcdn.com/40x30/rs.png" alt="Serbia">
+    <img class="flag" data-target="kosovo" src="https://flagcdn.com/40x30/xk.png" alt="Kosovo">
+    <img class="flag" data-target="albania" src="https://flagcdn.com/40x30/al.png" alt="Albania">
+    <img class="flag" data-target="macedonia" src="https://flagcdn.com/40x30/mk.png" alt="N.Macedonia">
+    <img class="flag" data-target="bulgaria" src="https://flagcdn.com/40x30/bg.png" alt="Bulgaria">
   </div>
 </section>
 
@@ -62,7 +64,21 @@
   <h2>Partner Meetings</h2>
   <p>We facilitate bespoke B2B matchmaking across CEE.</p>
   <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" class="section-img" alt="">
-</ction id="english" class="section container">
+</section>
+
+<section id="visits" class="section container">
+  <h2>Country Visits</h2>
+  <p>High-impact visits providing insight and direct introductions.</p>
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="section-img" alt="">
+</section>
+
+<section id="research" class="section alt container">
+  <h2>Market Research</h2>
+  <p>We deliver tailored market intelligence.</p>
+  <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a" class="section-img" alt="">
+</section>
+
+<section id="english" class="section container">
   <h2>Business English</h2>
   <p>Executive-level coaching for cross-border communication.</p>
   <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" class="section-img" alt="">
@@ -74,7 +90,7 @@
 
   <div class="accordion">
 
-    <div class="accordion-item">
+    <div id="poland" class="accordion-item">
       <button class="accordion-header">Poland 🇵🇱</button>
       <div class="accordion-body">
         <ul>
@@ -85,7 +101,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="hungary" class="accordion-item">
       <button class="accordion-header">Hungary 🇭🇺</button>
       <div class="accordion-body">
         <ul>
@@ -96,7 +112,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="slovenia" class="accordion-item">
       <button class="accordion-header">Slovenia 🇸🇮</button>
       <div class="accordion-body">
         <ul>
@@ -107,7 +123,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="croatia" class="accordion-item">
       <button class="accordion-header">Croatia 🇭🇷</button>
       <div class="accordion-body">
         <ul>
@@ -118,7 +134,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="bosnia" class="accordion-item">
       <button class="accordion-header">Bosnia & Herzegovina 🇧🇦</button>
       <div class="accordion-body">
         <ul>
@@ -129,7 +145,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="serbia" class="accordion-item">
       <button class="accordion-header">Serbia 🇷🇸</button>
       <div class="accordion-body">
         <ul>
@@ -140,7 +156,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="kosovo" class="accordion-item">
       <button class="accordion-header">Kosovo 🇽🇰</button>
       <div class="accordion-body">
         <ul>
@@ -151,7 +167,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="albania" class="accordion-item">
       <button class="accordion-header">Albania 🇦🇱</button>
       <div class="accordion-body">
         <ul>
@@ -162,7 +178,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="macedonia" class="accordion-item">
       <button class="accordion-header">N.Macedonia 🇲🇰</button>
       <div class="accordion-body">
         <ul>
@@ -173,7 +189,7 @@
       </div>
     </div>
 
-    <div class="accordion-item">
+    <div id="bulgaria" class="accordion-item">
       <button class="accordion-header">Bulgaria 🇧🇬</button>
       <div class="accordion-body">
         <ul>

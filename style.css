@@ -29,8 +29,9 @@ header {
   padding: 15px 0;
 }
 
+/* UPDATED LOGO SIZE */
 .logo-img {
-  height: 55px;
+  height: 140px;
   width: auto;
 }
 

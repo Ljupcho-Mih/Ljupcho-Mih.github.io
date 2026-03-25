@@ -29,12 +29,13 @@ header {
   padding: 15px 0;
 }
 
-/* UPDATED LOGO SIZE */
+/* UPDATED: larger visible logo */
 .logo-img {
   height: 140px;
   width: auto;
 }
 
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -45,6 +46,15 @@ header {
   text-decoration: none;
   color: #0A233F;
   font-weight: 600;
+}
+
+/* Mobile menu (hamburger) icon — fixed alignment */
+.mobile-menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 /* ===== HERO ===== */
@@ -149,10 +159,10 @@ header {
   border: 1px solid #ccc;
 }
 
+/* ===== FOOTER ===== */
 footer {
   background: #111;
   color: white;
   padding: 20px;
   text-align: center;
 }
-``

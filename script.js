@@ -1,1 +1,5 @@
-const menu=document.querySelector('.mobile-menu-icon'); const nav=document.querySelector('.nav-menu'); menu.addEventListener('click',()=>{nav.classList.toggle('open');});
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+});

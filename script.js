@@ -1,5 +1,2 @@
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-menuToggle.addEventListener("click", () => {
-navMenu.classList.toggle("open");
-});
+document.querySelector('.mobile-menu-icon').onclick=()=>{const m=document.querySelector('.nav-menu');m.style.display=m.style.display==='flex'?'none':'flex';};
+document.querySelectorAll('.accordion-header').forEach(h=>{h.onclick=()=>{const b=h.nextElementSibling;const o=b.style.display==='block';document.querySelectorAll('.accordion-body').forEach(x=>x.style.display='none');b.style.display=o?'none':'block';};});

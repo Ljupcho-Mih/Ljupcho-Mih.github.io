@@ -1,4 +1,4 @@
-document.querySelector('.mobile-menu-icon').onclick = function() {
+document.querySelector('.mobile-menu-icon').onclick = function () {
   const menu = document.querySelector('.nav-menu');
   menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
 };
@@ -6,8 +6,15 @@ document.querySelector('.mobile-menu-icon').onclick = function() {
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const body = header.nextElementSibling;
-    const open = body.style.display === 'block';
-    document.querySelectorAll('.accordion-body').forEach(b => b.style.display = 'none');
-    body.style.display = open ? 'none' : 'block';
+    const isOpen = body.style.display === 'block';
+
+    // Close all others
+    document.querySelectorAll('.accordion-body').forEach(section => {
+      section.style.display = 'none';
+    });
+
+    // Toggle this one
+    body.style.display = isOpen ? 'none' : 'block';
   });
 });
+``

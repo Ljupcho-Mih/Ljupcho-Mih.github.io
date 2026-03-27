@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function(){
 document.getElementById('menuToggle').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('show');
 });
@@ -9,5 +8,4 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     document.querySelectorAll('.accordion-body').forEach(b => b.style.display = 'none');
     body.style.display = isOpen ? 'none' : 'block';
   });
-});
 });

@@ -1,7 +1,6 @@
 document.getElementById('menuToggle').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('show');
 });
-
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const body = header.nextElementSibling;

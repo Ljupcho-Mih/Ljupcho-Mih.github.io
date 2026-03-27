@@ -1,5 +1,5 @@
 
-body { margin:0; font-family:Arial; overflow-x:hidden; background:white; }
+body { margin:0; font-family:Arial; overflow-x:hidden; background:white !important; }
 .navbar {display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:white;box-shadow:0 2px 4px rgba(0,0,0,0.1);} 
 .nav-logo {height:140px;} 
 .mobile-menu-icon {display:none;font-size:40px;cursor:pointer;} 
@@ -11,14 +11,14 @@ body { margin:0; font-family:Arial; overflow-x:hidden; background:white; }
 .hero-content {text-align:center;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#003366;padding:0 20px;} 
 .hero-title {font-size:64px;font-weight:900;} 
 .hero-subtitle {font-size:22px;margin-top:10px;} 
-.section {text-align:center;padding:60px 20px;background:white;} 
+.section {text-align:center;padding:60px 20px;background:white !important;} 
 .section-img {max-width:700px;width:100%;border-radius:14px;margin:20px auto;} 
 .accordion-header {background:#e6e6e6;padding:16px;width:100%;text-align:left;cursor:pointer;font-size:20px;border:none;} 
-.accordion-body {display:none;padding:16px;} 
-.contact-section {padding:60px;} 
+.accordion-body {display:none;padding:16px;background:white;} 
+.contact-section {padding:60px;background:white !important;} 
 .row {display:flex;flex-wrap:wrap;gap:20px;margin-bottom:20px;} 
-.row input {flex:1 1 45%;padding:16px;font-size:18px;} 
-.message-box {width:100%;height:200px;padding:16px;font-size:18px;} 
+.row input {flex:1 1 45%;padding:16px;font-size:18px;border:1px solid #ccc;background:white;} 
+.message-box {width:100%;height:200px;padding:16px;font-size:18px;border:1px solid #ccc;background:white;} 
 .btn {padding:16px 32px;background:#004AAD;color:white;border:none;border-radius:6px;font-size:18px;cursor:pointer;} 
 @media(max-width:768px){ 
   .mobile-menu-icon{display:block;} 

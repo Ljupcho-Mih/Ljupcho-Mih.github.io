@@ -7,14 +7,7 @@ document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const body = header.nextElementSibling;
     const isOpen = body.style.display === 'block';
-
-    // Close all others
-    document.querySelectorAll('.accordion-body').forEach(section => {
-      section.style.display = 'none';
-    });
-
-    // Toggle this one
+    document.querySelectorAll('.accordion-body').forEach(section => { section.style.display = 'none'; });
     body.style.display = isOpen ? 'none' : 'block';
   });
 });
-``

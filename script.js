@@ -1,11 +1,14 @@
-document.getElementById('menuToggle').addEventListener('click', () => {
- document.getElementById('mobileMenu').classList.toggle('show');
+const toggle=document.getElementById("menuToggle");
+const menu=document.getElementById("mobileMenu");
+toggle.addEventListener("click",()=>{
+if(menu.style.display==="flex"){menu.style.display="none";}
+else{menu.style.display="flex";}
 });
-document.querySelectorAll('.accordion-header').forEach(header => {
- header.addEventListener('click', () => {
- const body = header.nextElementSibling;
- const isOpen = body.style.display === 'block';
- document.querySelectorAll('.accordion-body').forEach(b => b.style.display = 'none');
- body.style.display = isOpen ? 'none' : 'block';
- });
+const headers=document.querySelectorAll(".accordion-header");
+headers.forEach(header=>{
+header.addEventListener("click",()=>{
+const body=header.nextElementSibling;
+if(body.style.display==="block"){body.style.display="none";}
+else{body.style.display="block";}
+});
 });

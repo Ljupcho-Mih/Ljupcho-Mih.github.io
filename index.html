@@ -4,121 +4,103 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CEExpand – Connecting Ideas and Businesses in CEE</title>
-<link rel="stylesheet" href="style_final.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
 <header>
-    <nav class="navbar">
-        <a href="/">
-            <img src="logo.png" class="nav-logo" alt="CEExpand Logo">
-        </a>
+<nav class="navbar">
+<a href="/" id="homeLink"><img src="logo.png" class="nav-logo"></a>
 
-        <div class="mobile-menu-icon" id="menuToggle">☰</div>
+<div class="mobile-menu-icon" id="menuToggle">☰</div>
 
-        <ul class="nav-menu" id="mobileMenu">
-            <li><a href="/">Home</a></li>
-            <li><a href="#trade">Trade Missions</a></li>
-            <li><a href="#partners">Partner Meetings</a></li>
-            <li><a href="#visits">Country Visits</a></li>
-            <li><a href="#research">Market Research</a></li>
-            <li><a href="#english">Business English</a></li>
-            <li><a href="#opportunities">Opportunities</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<ul class="nav-menu" id="mobileMenu">
+<li><a href="/" class="nav-link">Home</a></li>
+<li><a href="#trade" class="nav-link">Trade Missions</a></li>
+<li><a href="#partners" class="nav-link">Partner Meetings</a></li>
+<li><a href="#visits" class="nav-link">Country Visits</a></li>
+<li><a href="#research" class="nav-link">Market Research</a></li>
+<li><a href="#english" class="nav-link">Business English</a></li>
+<li><a href="#opportunities" class="nav-link">Opportunities</a></li>
+<li><a href="#contact" class="nav-link">Contact</a></li>
+</ul>
+</nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <img src="https://images.pexels.com/photos/14890864/pexels-photo-14890864.jpeg"
-         class="hero-bg" />
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 class="hero-title">CEExpand</h1>
-        <p class="hero-subtitle">CONNECTING IDEAS AND BUSINESSES IN CEE</p>
-    </div>
+<section class="hero" id="home">
+<img src="https://images.unsplash.com/photo-1541849546-216549ae216d" class="hero-bg">
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+<h1 class="hero-title">CEExpand</h1>
+<p class="hero-subtitle">CONNECTING IDEAS AND BUSINESSES IN CEE</p>
+</div>
 </section>
 
-<!-- TRADE -->
 <section id="trade" class="section">
-    <h2>Trade Missions</h2>
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" class="section-img" />
-    <p>Our trade missions provide companies with structured access to regional buyers,
-       distributors, public institutions and more.</p>
+<h2>Trade Missions</h2>
+<p>Structured access to regional buyers, distributors and institutions.</p>
 </section>
 
-<!-- PARTNERS -->
 <section id="partners" class="section">
-    <h2>Partner Meetings</h2>
-    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" class="section-img" />
-    <p>Our partner matchmaking services help you identify trusted distributors, partners,
-       investors and suppliers.</p>
+<h2>Partner Meetings</h2>
+<p>Find trusted distributors, partners, and investors.</p>
 </section>
 
-<!-- VISITS -->
 <section id="visits" class="section">
-    <h2>Country Visits</h2>
-    <img src="https://images.unsplash.com/photo-1551867633-194f125bddfa" class="section-img" />
-    <p>Country visits provide hands-on exposure to Central European markets.</p>
+<h2>Country Visits</h2>
+<p>Hands-on exposure to Central European markets.</p>
 </section>
 
-<!-- RESEARCH -->
 <section id="research" class="section">
-    <h2>Market Research</h2>
-    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a" class="section-img" />
-    <p>Our market research reports help companies make informed decisions.</p>
+<h2>Market Research</h2>
+<p>Make informed decisions with local insights.</p>
 </section>
 
-<!-- ENGLISH -->
 <section id="english" class="section">
-    <h2>Business English</h2>
-    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846" class="section-img" />
-    <p>We provide executive communication training for international operations.</p>
+<h2>Business English</h2>
+<p>Executive communication training for international operations.</p>
 </section>
 
-<!-- OPPORTUNITIES -->
 <section id="opportunities" class="section">
 <h2>Opportunities Across CEE</h2>
 
 <div class="accordion">
+<div class="accordion-item">
+<button class="accordion-header">Hungary</button>
+<div class="accordion-body">Automotive, Food, Water</div>
+</div>
 
-    <div class="accordion-item">
-        <button class="accordion-header">Poland</button>
-        <div class="accordion-body">
-            <ul><li>Solar</li><li>Manufacturing</li><li>Food Industry</li></ul>
-        </div>
-    </div>
+<div class="accordion-item">
+<button class="accordion-header">Poland</button>
+<div class="accordion-body">Solar, Manufacturing</div>
+</div>
+</div>
 
-    <div class="accordion-item">
-        <button class="accordion-header">Hungary</button>
-        <div class="accordion-body">
-            <ul><li>Water Filtering</li><li>Food Industry</li><li>Automotive</li></ul>
-        </div>
-    </div>
+</section>
 
-    <div class="accordion-item">
-        <button class="accordion-header">Slovenia</button>
-        <div class="accordion-body">
-            <ul><li>Automotive</li><li>Food Industry</li><li>AI</li></ul>
-        </div>
-    </div>
+<section id="contact" class="contact-section">
+<h2>Contact</h2>
 
-    <div class="accordion-item">
-        <button class="accordion-header">Croatia</button>
-        <div class="accordion-body">
-            <ul><li>Tourism</li><li>Food Industry</li><li>Construction</li></ul>
-        </div>
-    </div>
+<form class="contact-form" action="https://formspree.io/f/xvzvpzde" method="POST">
+<div class="row">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+</div>
 
-    <div class="accordion-item">
-        <button class="accordion-header">Bosnia & Herzegovina</button>
-        <div class="accordion-body">
-            <ul><li>Investments</li><li>Tourism</li><li>Food Industry</li></ul>
-        </div>
-    </div>
+<textarea name="message" class="message-box" placeholder="Your Message" required></textarea>
 
-    <div class="accordion-item">
-        <button class="accordion-header">Serbia</button>
-        <div class="accordion-body">
+<button type="submit" class="btn">Send Message</button>
+</form>
+</section>
+
+<footer>
+<img src="logo.png" class="footer-logo">
+<p>© 2026 CEExpand — All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

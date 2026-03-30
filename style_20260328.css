@@ -1,20 +1,20 @@
 body { margin:0; font-family:Arial; overflow-x:hidden; background:white; }
 
-.navbar {display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:white;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+.navbar {display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:white;box-shadow:0 2px 4px rgba(0,0,0,0.1);position:relative;z-index:200;}
 
-/* FIX 1: nav-logo was 140px (too large) — reduced to 80px */
+/* nav-logo: was 140px (too large), now 80px */
 .nav-logo {height:80px;}
 
 .mobile-menu-icon {display:none;font-size:40px;cursor:pointer;}
 .nav-menu {list-style:none;display:flex;gap:20px;z-index:9999;margin:0;padding:0;}
 .nav-menu a {text-decoration:none;font-size:18px;font-weight:600;color:#004AAD;}
 
-.hero {height:70vh;position:relative;overflow:hidden;background:#dce8f0;}
+.hero {height:70vh;position:relative;overflow:hidden;background:#cdd8e3;}
 .hero-bg {width:100%;height:100%;object-fit:cover;object-position:center center;position:absolute;top:0;left:0;display:block;}
 
-/* FIX 2: overlay was rgba(255,255,255,0.95) — nearly opaque white, making image invisible.
-   Replaced with a very light bottom-weighted gradient so Budapest photo shows clearly.
-   No dark or black values anywhere — works identically on desktop and mobile. */
+/* OVERLAY FIX: was rgba(255,255,255,0.95) — near-opaque white hiding the photo entirely.
+   Now a very light gradient so Budapest Parliament is clearly visible on all devices.
+   Max opacity at bottom is 0.45 — enough to keep text readable, never dark/black. */
 .hero-overlay {
     position:absolute;
     inset:0;
@@ -26,9 +26,10 @@ body { margin:0; font-family:Arial; overflow-x:hidden; background:white; }
     );
 }
 
-/* Text shadow provides readability over any sky/water colour without needing a heavy overlay */
 .hero-content {text-align:center;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#003366;padding:0 20px;width:90%;}
-.hero-title {font-size:64px;font-weight:900;margin:0;text-shadow:0 2px 8px rgba(255,255,255,0.85),0 1px 3px rgba(255,255,255,0.95);}
+
+/* White text-shadow keeps title readable over the photo without a heavy overlay */
+.hero-title {font-size:64px;font-weight:900;margin:0;text-shadow:0 2px 8px rgba(255,255,255,0.85);}
 .hero-subtitle {font-size:22px;margin-top:10px;text-shadow:0 1px 6px rgba(255,255,255,0.85);}
 
 .section {text-align:center;padding:60px 20px;background:white;}
@@ -47,7 +48,7 @@ body { margin:0; font-family:Arial; overflow-x:hidden; background:white; }
 .btn {padding:16px 32px;background:#004AAD;color:white;border:none;border-radius:6px;font-size:18px;cursor:pointer;}
 .btn:hover {background:#003388;}
 
-/* FIX 3: footer logo — reasonable size, centred, links to Home */
+/* FOOTER — with logo linking to Home */
 footer {background:#f5f5f5;border-top:1px solid #e0e0e0;padding:30px 20px;text-align:center;}
 .footer-logo {height:60px;display:block;margin:0 auto 12px auto;}
 footer p {margin:0;color:#555;font-size:14px;}
@@ -59,7 +60,8 @@ footer p {margin:0;color:#555;font-size:14px;}
     .nav-menu.show{display:flex;}
     .nav-logo{height:60px;}
     .hero{height:60vh;}
-    /* FIX 2b: explicit mobile override — lighter than desktop so image pops on small screens */
+    /* Explicit mobile override — even lighter so photo is maximum visible on small screens,
+       completely removes any chance of dark/black background appearing */
     .hero-overlay{
         background: linear-gradient(
             to bottom,

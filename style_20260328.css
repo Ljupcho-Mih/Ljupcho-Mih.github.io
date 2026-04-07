@@ -1,77 +1,288 @@
-body { margin:0; font-family:Arial; overflow-x:hidden; background:white; }
+body {
+    margin: 0;
+    font-family: Arial;
+    overflow-x: hidden;
+    background: white;
+}
 
-.navbar {display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:white;box-shadow:0 2px 4px rgba(0,0,0,0.1);position:relative;z-index:200;}
+/* NAVBAR — white, no overflow, logo sized so it never causes horizontal scroll */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    z-index: 200;
+}
+.nav-logo {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+.mobile-menu-icon {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: #004AAD;
+    line-height: 1;
+    padding: 4px;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #004AAD;
+}
 
-/* nav-logo: was 140px (too large), now 80px */
-.nav-logo {height:80px;}
+/* HERO — contains image, never causes horizontal or extra vertical scroll */
+.hero {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background: #dce8f0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
 
-.mobile-menu-icon {display:none;font-size:40px;cursor:pointer;}
-.nav-menu {list-style:none;display:flex;gap:20px;z-index:9999;margin:0;padding:0;}
-.nav-menu a {text-decoration:none;font-size:18px;font-weight:600;color:#004AAD;}
-
-.hero {height:70vh;position:relative;overflow:hidden;background:#cdd8e3;}
-.hero-bg {width:100%;height:100%;object-fit:cover;object-position:center center;position:absolute;top:0;left:0;display:block;}
-
-/* OVERLAY FIX: was rgba(255,255,255,0.95) — near-opaque white hiding the photo entirely.
-   Now a very light gradient so Budapest Parliament is clearly visible on all devices.
-   Max opacity at bottom is 0.45 — enough to keep text readable, never dark/black. */
+/* OVERLAY — Option A soft white: photo clearly visible, no dark/black at any point */
 .hero-overlay {
-    position:absolute;
-    inset:0;
+    position: absolute;
+    inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(255,255,255,0.08) 0%,
-        rgba(255,255,255,0.15) 55%,
-        rgba(255,255,255,0.45) 100%
+        rgba(255,255,255,0.05) 0%,
+        rgba(255,255,255,0.10) 55%,
+        rgba(255,255,255,0.38) 100%
     );
 }
 
-.hero-content {text-align:center;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#003366;padding:0 20px;width:90%;}
+.hero-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #003366;
+    padding: 0 20px;
+    width: 90%;
+    box-sizing: border-box;
+}
+.hero-title {
+    font-size: 64px;
+    font-weight: 900;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(255,255,255,0.9);
+}
+.hero-subtitle {
+    font-size: 22px;
+    margin-top: 10px;
+    text-shadow: 0 1px 6px rgba(255,255,255,0.9);
+}
 
-/* White text-shadow keeps title readable over the photo without a heavy overlay */
-.hero-title {font-size:64px;font-weight:900;margin:0;text-shadow:0 2px 8px rgba(255,255,255,0.85);}
-.hero-subtitle {font-size:22px;margin-top:10px;text-shadow:0 1px 6px rgba(255,255,255,0.85);}
+/* SECTIONS — white throughout */
+.section {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+.section-img {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 14px;
+    margin: 20px auto;
+    display: block;
+}
 
-.section {text-align:center;padding:60px 20px;background:white;}
-.section-img {max-width:700px;width:100%;border-radius:14px;margin:20px auto;display:block;}
+/* ACCORDION */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.accordion-item {
+    margin-bottom: 4px;
+}
+.accordion-header {
+    background: #e6e6e6;
+    padding: 16px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.accordion-header:hover {
+    background: #d8d8d8;
+}
+.accordion-body {
+    display: none;
+    padding: 16px;
+    background: white;
+}
 
-.accordion {max-width:800px;margin:0 auto;}
-.accordion-item {margin-bottom:4px;}
-.accordion-header {background:#e6e6e6;padding:16px;width:100%;text-align:left;cursor:pointer;font-size:20px;border:none;border-radius:4px;}
-.accordion-header:hover {background:#d8d8d8;}
-.accordion-body {display:none;padding:16px;background:white;}
+/* CONTACT */
+.contact-section {
+    padding: 60px;
+    background: white;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.row input {
+    flex: 1 1 45%;
+    padding: 16px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.message-box {
+    width: 100%;
+    height: 200px;
+    padding: 16px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.btn {
+    padding: 16px 32px;
+    background: #004AAD;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #003388;
+}
 
-.contact-section {padding:60px;background:white;}
-.row {display:flex;flex-wrap:wrap;gap:20px;margin-bottom:20px;}
-.row input {flex:1 1 45%;padding:16px;font-size:18px;border:1px solid #ccc;background:white;border-radius:4px;box-sizing:border-box;}
-.message-box {width:100%;height:200px;padding:16px;font-size:18px;border:1px solid #ccc;background:white;border-radius:4px;box-sizing:border-box;}
-.btn {padding:16px 32px;background:#004AAD;color:white;border:none;border-radius:6px;font-size:18px;cursor:pointer;}
-.btn:hover {background:#003388;}
+/* FOOTER — white, logo visible, no overflow */
+footer {
+    background: white;
+    border-top: 1px solid #e8e8e8;
+    padding: 30px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+.footer-logo {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+footer p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
 
-/* FOOTER — with logo linking to Home */
-footer {background:#f5f5f5;border-top:1px solid #e0e0e0;padding:30px 20px;text-align:center;}
-.footer-logo {height:60px;display:block;margin:0 auto 12px auto;}
-footer p {margin:0;color:#555;font-size:14px;}
+/* ============================================================
+   MOBILE — max-width 768px
+   Key rules:
+   - overflow-x: hidden on html+body prevents sideways scroll
+   - nav-menu positioned absolute, full width, white, z-index above hero
+   - hero-overlay stays light white gradient (no dark/black possible)
+   - hero uses height not min-height so it never overflows vertically
+   - footer-logo sized so it never pushes layout
+   ============================================================ */
+@media (max-width: 768px) {
 
-/* MOBILE */
-@media(max-width:768px){
-    .mobile-menu-icon{display:block;}
-    .nav-menu{display:none;flex-direction:column;background:white;width:100%;padding:20px 0;position:absolute;top:110px;left:0;box-shadow:0 4px 8px rgba(0,0,0,0.08);}
-    .nav-menu.show{display:flex;}
-    .nav-logo{height:60px;}
-    .hero{height:60vh;}
-    /* Explicit mobile override — even lighter so photo is maximum visible on small screens,
-       completely removes any chance of dark/black background appearing */
-    .hero-overlay{
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        padding: 20px 0;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        z-index: 9999;
+        box-sizing: border-box;
+    }
+    .nav-menu.show {
+        display: flex;
+    }
+    .nav-menu li {
+        padding: 4px 20px;
+    }
+
+    .nav-logo {
+        height: 50px;
+    }
+
+    .hero {
+        height: 60vh;
+        width: 100%;
+    }
+
+    /* Mobile overlay — lightest possible, Budapest photo maximum visible */
+    .hero-overlay {
         background: linear-gradient(
             to bottom,
-            rgba(255,255,255,0.06) 0%,
-            rgba(255,255,255,0.12) 55%,
-            rgba(255,255,255,0.40) 100%
+            rgba(255,255,255,0.04) 0%,
+            rgba(255,255,255,0.08) 55%,
+            rgba(255,255,255,0.35) 100%
         );
     }
-    .hero-title{font-size:38px;}
-    .hero-subtitle{font-size:16px;}
-    .contact-section{padding:30px 20px;}
-    .footer-logo{height:50px;}
+
+    .hero-title {
+        font-size: 38px;
+    }
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .contact-section {
+        padding: 30px 20px;
+    }
+
+    .footer-logo {
+        height: 60px;
+    }
+
+    footer {
+        padding: 24px 20px;
+    }
+
 }

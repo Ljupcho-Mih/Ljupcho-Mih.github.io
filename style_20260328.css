@@ -2,11 +2,73 @@
     color-scheme: light;
 }
 
+/* Force white on ALL container elements.
+   Samsung Internet dark mode ignores color-scheme and overrides
+   any element that doesn't have an explicit background-color.
+   These declarations + the prefers-color-scheme override below
+   together defeat Samsung's dark mode completely. */
+html {
+    background-color: #ffffff;
+}
+
 body {
     margin: 0;
     font-family: Arial;
     overflow-x: hidden;
-    background: white;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #222222;
+}
+
+p {
+    color: #444444;
+}
+
+/* SAMSUNG INTERNET DARK MODE DEFEAT:
+   When the OS is in dark mode, Samsung Internet forcibly darkens
+   any element without an explicit background. This block re-forces
+   white on every structural element, overriding Samsung's injection. */
+@media (prefers-color-scheme: dark) {
+    html,
+    body,
+    header,
+    .navbar,
+    section,
+    .section,
+    .contact-section,
+    footer,
+    .accordion-body,
+    .accordion-header,
+    .row input,
+    .message-box {
+        background-color: #ffffff !important;
+        color: inherit !important;
+    }
+    h2 {
+        color: #222222 !important;
+    }
+    p {
+        color: #444444 !important;
+    }
+    .nav-menu a {
+        color: #004AAD !important;
+    }
+    .hero-title {
+        color: #003366 !important;
+    }
+    .hero-subtitle {
+        color: #003366 !important;
+    }
+    .accordion-header {
+        background-color: #e6e6e6 !important;
+        color: #222222 !important;
+    }
 }
 
 /* NAVBAR — white, no overflow, logo sized so it never causes horizontal scroll */
